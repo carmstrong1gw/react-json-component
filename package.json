@@ -45,5 +45,14 @@
     "email": "baso533@gmail.com",
     "url": "https://github.com/baso53"
   },
-  "keywords": ["react", "recursive", "json", "component", "renderer", "nested", "list", "object"]
+  "keywords": [
+    "react",
+    "recursive",
+    "json",
+    "component",
+    "renderer",
+    "nested",
+    "list",
+    "object"
+  ]
 }

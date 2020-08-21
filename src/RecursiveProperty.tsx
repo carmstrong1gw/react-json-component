@@ -1,7 +1,6 @@
 import * as React from 'react';
 import styled from 'styled-components';
 import ExpandableProperty from './ExpandableProperty';
-import { camelCaseToNormal } from './utils';
 
 const RecursivePropertyContainer = styled.div`
   padding-top: 10px;
@@ -40,11 +39,11 @@ const RecursiveProperty: React.FC<Props> = props => {
           typeof props.property === 'string' ||
           typeof props.property === 'boolean' ? (
             <React.Fragment>
-              <PropertyName>{props.propertyNameProcessor!(props.propertyName)}: </PropertyName>
+              <PropertyName>{props.propertyName}: </PropertyName>
               {props.property.toString()}
             </React.Fragment>
           ) : (
-            <ExpandableProperty title={props.propertyNameProcessor!(props.propertyName)} expanded={!!props.rootProperty}>
+            <ExpandableProperty title={props.propertyName} expanded={!!props.rootProperty}>
               {Object.values(props.property).map((property, index, { length }) => (
                 <RecursiveProperty
                   key={index}
@@ -64,8 +63,7 @@ const RecursiveProperty: React.FC<Props> = props => {
 
 RecursiveProperty.defaultProps = {
   emptyPropertyLabel: 'Property is empty',
-  excludeBottomBorder: false,
-  propertyNameProcessor: camelCaseToNormal
+  excludeBottomBorder: false
 };
 
 export default RecursiveProperty;

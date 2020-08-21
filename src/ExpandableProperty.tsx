@@ -26,8 +26,7 @@ export default class ExpandableProperty extends React.Component<Props, State> {
     return (
       <React.Fragment>
         <PropertyName onClick={() => this.setState({ isOpen: !this.state.isOpen })}>
-          {this.props.title}
-          {this.state.isOpen ? '-' : '+'}
+          {this.state.isOpen ? '-' : '+'}&nbsp;{this.props.title}
         </PropertyName>
         {this.state.isOpen ? this.props.children : null}
         {React.Children.count(this.props.children) === 0 && this.state.isOpen ? 'The list is empty!' : null}
