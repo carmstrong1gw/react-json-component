@@ -11,6 +11,8 @@ Read a blog post about it below:
 
 NOTE: Currently only supports ES6 modules
 
+**NOTE: You must use tsc to compile the TypeScript in order to update the dist folder!**
+
 # Example
 ```tsx
 import * as React from 'react';
