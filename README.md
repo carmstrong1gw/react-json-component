@@ -13,6 +13,8 @@ NOTE: Currently only supports ES6 modules
 
 # **NOTE: You must use tsc to compile the TypeScript in order to update the dist folder!**
 
+See: https://alanocoder.com/how-to-publish-typescript-react-component-to-npm/ and https://alanocoder.com/how-to-publish-typescript-react-component-to-npm/
+
 # Example
 ```tsx
 import * as React from 'react';
